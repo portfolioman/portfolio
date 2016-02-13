@@ -257,6 +257,9 @@ div {
 }
 
 @media (max-width: 650px) {
+	.top-cover-left {
+		background-image:url('../img/Portfolio_logo.png');
+	}
 	.top-cover-right {
 		margin-left: 0%;
 	}
