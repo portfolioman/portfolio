@@ -135,11 +135,12 @@ div {
 	height:100vh;
 }
 .top-cover-left {
-	position: relative;
+	position: fixed;
 	width:33.3333333%;
 	z-index: 3;
 }
 .top-cover-right {
+	margin-left: 33.333333%;
 	width:66.6666666%;
 }
 
@@ -255,7 +256,13 @@ div {
 	text-align: center;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 620px) {
+	.top-cover-right {
+		margin-left: 0%;
+	}
+	.top-cover-left {
+		position:relative;
+	}
 	.logo {
 		margin-bottom: 1rem;
 	}
@@ -288,5 +295,10 @@ div {
 	.intro-caption {
 		font-size: 1.7em;
 		text-align: center;
+	}
+}
+@media (min-width: 621px) and (max-width: 900px) {
+	.menu-vertical .menu {
+		width:50%;
 	}
 }
