@@ -7,6 +7,9 @@ body,html {
 	width:100%;
 }
 body {
+	background-image:url('../img/pattern/cubicon.png');
+	/*background-image:url('../img/pattern/three-sides.png');*/
+	background-size:50px;
 	font-family:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Noto sans Japanese", Meiryo;
 }
 div {
@@ -25,23 +28,50 @@ div {
 .dtc-middle {
 	vertical-align: middle;
 }
-
+@-webkit-keyframes effect-animation {
+    from {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      -webkit-transform: scale(100);
+      opacity: 0.0;
+    }
+}
 .btn {
-	background-color: #A52146;
-	color: #fff;
+	background-color: #fff;
+	border: 1px solid #000;
+	box-shadow: 2px 2px 0 #fff, 3px 3px 0 #000;
+	border-radius: 4px;
+	color: #000;
 	cursor: pointer;
 	display: inline-block;
-	font-size:1.2rem;
-	padding:.8rem 1rem;
+	font-size: 1.2rem;
+	overflow: hidden;
+	padding: .8rem 2rem;
+	position: relative;
 	text-decoration: none;
-	-o-transition:all .2s;
-	-ms-transition:all .2s;
-	-moz-transition:all .2s;
-	-webkit-transition:all .2s;
-	transition:all .2s;
+	-o-transition: all .2s;
+	-ms-transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	transition: all .2s;
 }
+	.btn span {
+		background-color:rgba(180,180,180,0.5);
+		display: block;
+		border-radius:50%;
+		width: 50px;
+		height: 50px;
+		margin-left: -25px;
+		margin-top: -25px;
+		position:absolute;
+		-webkit-animation: effect-animation 2s;
+	}
 	.btn:hover {
-		opacity:.8;
+		background-color:#000;
+		box-shadow:0 0 0 #000;
+		color:#fff;
 	}
 
 .members {
@@ -106,11 +136,7 @@ div {
 	color: #fff;
 	font-size: 3em;
 	margin-top: 0;
-	-o-text-shadow: 0 0 10px #000, 0 0 10px #f6a828;
-	-ms-text-shadow: 0 0 10px #000, 0 0 10px #f6a828;
-	-moz-text-shadow: 0 0 10px #000, 0 0 10px #f6a828;
-	-webkit-text-shadow: 0 0 10px #000, 0 0 10px #f6a828;
-	text-shadow: 0 0 10px #000;
+	text-shadow:0 0 10px #000;
 }
 .hd2 {
 	position: relative;
@@ -132,7 +158,7 @@ div {
 .top-cover {
 	float:left;
 	display: block;
-	height:100vh;
+	height:100%;
 }
 .top-cover-left {
 	position: fixed;
@@ -152,6 +178,9 @@ div {
 	font-weight:bold;
 }
 
+.panel > div {
+	background-color:rgba(255,255,255,0.92);
+}
 /* panels */
 .panel-wrap {
 	position:relative;
@@ -204,6 +233,9 @@ div {
 .menu-vertical {
 }
 	.menu-vertical .menu {
+		background-image: -o-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
+		background-image: -moz-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
+		background-image: -webkit-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
 		background-image: linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
 		box-sizing: border-box;
 		border: 2px solid #fff;
@@ -230,7 +262,7 @@ div {
 	animation: backIndex 8s infinite;
 	background-blend-mode:overlay;
 	background-color:rgba(0,0,0,0.5);
-	background-image:url(../img/building_shine.jpg);
+	background-image:url(../img/back.jpg);
 	background-position: 0 center;
 	background-size:cover;
 }
@@ -267,6 +299,7 @@ div {
 		position:relative;
 	}
 	.logo {
+		font-size: 2.5rem;
 		margin-bottom: 1rem;
 	}
 	.card-info-colored {

@@ -34,4 +34,19 @@ $(document).ready(function() {
 		afterMenuAction(index);
 		afterPanelAction(index);
 	});
+
+	var $window = window;
+	var BtnEffect = {
+		init : function() {
+			var $targets = $('.btn--effect');
+			$targets.on('click', function(e) {
+				$(this).append('<span></span>');
+				var $span = $(this).find('span');
+				$window.setTimeout(function() {
+					$span.remove();
+				}, 1800);
+			});
+		}
+	};
+	BtnEffect.init();
 });
