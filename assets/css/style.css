@@ -13,8 +13,6 @@ body,html {
 	width:100%;
 }
 body {
-	background-image:url('../img/pattern/cubicon.png');
-	/*background-image:url('../img/pattern/three-sides.png');*/
 	background-size:50px;
 	font-family:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Noto sans Japanese", Meiryo;
 }
@@ -26,7 +24,12 @@ ul {
 * {
 	box-sizing:border-box;
 }
-
+.text-white {
+	color:#fff;
+}
+strong.approach {
+	font-weight: bold;
+}
 .mb-1 {
 	margin-bottom: 1rem;
 }
@@ -116,7 +119,6 @@ li.layer.conpact {
 	width: 500px;
 }
 .top-catchcopy {
-	color:#000;
 	font-size:1.1em;
 	font-weight: bold;
 	position: absolute;
@@ -213,4 +215,72 @@ li.layer.conpact {
 	bottom:calc(-.25em - 12px);
 	left:50%;
 	position:absolute;
+}
+.smoke {
+	position:absolute;
+}
+.smoke--topleft {
+	left:-200px;
+	top:-200px;
+	transform:rotate(-10deg)
+	-webkit-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+.smoke--topright {
+	right:-200px;
+	top:-200px;
+	-webkit-transform: rotate(220deg);
+	-ms-transform: rotate(220deg);
+	-o-transform: rotate(220deg);
+	transform: rotate(220deg);
+}
+.smoke--bottomleft {
+	bottom:-180px;
+	left:-180px;
+	-webkit-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+.smoke--bottomright {
+	bottom:-200px;
+	right:-200px;
+	-webkit-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
+/* SP */
+@media (max-width : 600px) {
+	#top-back {
+		left:-2%;
+	}
+	#top-logo {
+		margin-left:-40%;
+		width:80%;
+	}
+
+	.smoke--topleft,
+	.smoke--topright {
+		top:-300px;
+	}
+	.smoke--bottomleft,
+	.smoke--topleft {
+		left:-300px;
+	}
+	.smoke--bottomright,
+	.smoke--topright {
+		right:-300px;
+	}
+	.smoke--bottomleft,
+	.smoke--bottomright {
+		bottom:-300px;
+	}
+}
+
+/* tablet */
+@media (max-device-width : 925px) {
 }
