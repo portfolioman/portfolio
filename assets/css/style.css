@@ -256,7 +256,7 @@ li.layer.conpact {
 /* SP */
 @media (max-width : 600px) {
 	#top-back {
-		left:-2%;
+		left:-4%;
 	}
 	#top-logo {
 		margin-left:-40%;
