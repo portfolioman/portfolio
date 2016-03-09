@@ -111,6 +111,14 @@ li.layer.conpact {
 	top:-10%;
 	width:125%;
 }
+	#top-back > .inner {
+		background-color:rgba(0,0,0,0.45);
+		left:0;
+		height:100%;
+		position:absolute;
+		top:0;
+		width:100%;
+	}
 #top-logo {
 	left: 50%;
 	margin-left: -250px;
@@ -120,7 +128,6 @@ li.layer.conpact {
 }
 .top-catchcopy {
 	font-size:1.1em;
-	font-weight: bold;
 	position: absolute;
 	text-align: center;
 	top:31%;
@@ -220,8 +227,8 @@ li.layer.conpact {
 	position:absolute;
 }
 .smoke--topleft {
-	left:-200px;
-	top:-200px;
+	left:-240px;
+	top:-240px;
 	transform:rotate(-10deg)
 	-webkit-transform: rotate(-10deg);
 	-ms-transform: rotate(-10deg);
@@ -271,12 +278,18 @@ li.layer.conpact {
 		width:90%;
 	}
 
-	.smoke--topleft,
-	.smoke--topright {
-		top:-300px;
-	}
-	.smoke--bottomleft,
 	.smoke--topleft {
+		left:-320px;
+		top:-340px;
+		-webkit-transform: rotate(50deg);
+		-ms-transform: rotate(50deg);
+		-o-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	.smoke--topright {
+		top:-350px;
+	}
+	.smoke--bottomleft {
 		left:-300px;
 	}
 	.smoke--bottomright,
