@@ -255,12 +255,20 @@ li.layer.conpact {
 
 /* SP */
 @media (max-width : 600px) {
+	body {
+		font-size:.95em;
+	}
 	#top-back {
-		left:-4%;
+		left:-10%;
+		width:150%;
 	}
 	#top-logo {
-		margin-left:-40%;
-		width:80%;
+		margin-left:-50%;
+		width:100%;
+	}
+	#recruit-btn {
+		margin-left:-45%;
+		width:90%;
 	}
 
 	.smoke--topleft,
