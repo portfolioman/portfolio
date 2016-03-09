@@ -1,6 +1,12 @@
 @charset 'utf-8';
 
+:root {
+	--main-color : #aaa5e5;
+	--sub-color : #aae4c5;
+	--text-color : #fff;
+}
 body,html {
+	color :var(--text-color);
 	height:100%;
 	margin:0;
 	padding:0;
@@ -12,7 +18,12 @@ body {
 	background-size:50px;
 	font-family:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Noto sans Japanese", Meiryo;
 }
-div {
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+* {
 	box-sizing:border-box;
 }
 
@@ -73,273 +84,133 @@ div {
 		box-shadow:0 0 0 #000;
 		color:#fff;
 	}
-
-.members {
-	list-style-type: none;
-	padding-left:0;
-	overflow: hidden;
-}
-	.members .member {
-		display: block;
-		float:left;
-		margin-bottom: 1rem;
-		overflow: hidden;
-		padding:1rem;
-		text-align: center;
-		width:20%;
-	}
-	.member-face {
-		height:80px;
-		margin-bottom: 1rem;
-		width:80px;
-	}
-	.member-name {
-		font-size:1.7rem;
-		margin-top: 0;
-		margin-bottom:.5rem;
-	}
-	.member-link {
-		color:#000;
-	}
-		.member-link:hover {
-			text-decoration: none;
-		}
-
-[class*=card-info] {
-	padding:.5rem .8rem;
-}
-.card-info {
-	border-top: 2px solid #0300DD;
-	border-right: 2px solid #42D028;
-	border-bottom: 2px solid #D0CB28;
-	border-radius:0 .8rem .8rem 0;
-	color:#000;
-}
-.card-info-colored {
-	background-color:#000;
-	border-top: 2px solid #D02;
-	border-left: 2px solid #42D028;
-	border-bottom: 2px solid #D0CB28;
-	border-radius:.8rem 0 0 .8rem;
-	color:#fff;
-	display: inline-block;
-}
-.intro-caption {
-	font-weight:lighter;
-}
-.padding-standard {
-	padding:2rem 2rem;
-}
-
-/* headings */
-.logo {
-	color: #fff;
-	font-size: 3em;
-	margin-top: 0;
-	text-shadow:0 0 10px #000;
-}
-.hd2 {
-	position: relative;
-	display: inline-block;
-	z-index: 1;
-}
-.hd2:before {
-	background-image: linear-gradient(#2FD4BD, #17C5CE, #23FF00);
-	border-radius: 1px;
-	content: '';
-	height: 3px;
-	left: 0;
-	position: absolute;
-	bottom: -8px;
-	width: 100%;
-	z-index: 0;
-}
-
-.top-cover {
-	float:left;
-	display: block;
-	height:100%;
-}
-.top-cover-left {
-	position: fixed;
-	width:33.3333333%;
-	z-index: 3;
-}
-.top-cover-right {
-	margin-left: 33.333333%;
-	width:66.6666666%;
-}
-
-.size-max {
+li.layer {
 	height:100%;
 	width:100%;
 }
-.bold {
-	font-weight:bold;
+li.layer.conpact {
+	height:0;
+	width:0;
 }
 
-.panel > div {
-	background-color:rgba(255,255,255,0.92);
-}
-/* panels */
-.panel-wrap {
+#scene {
+	height:100%;
+	overflow: hidden;
 	position:relative;
+	width:100%;
 }
-.panel {
-	display: none;
-	left:-100%;
-	position:absolute;
-	top:0;
-	z-index:-1;
-}
-.panel.visible {
-	-webkit-animation:panelVisible .7s 1;
-	animation:panelVisible .7s 1;
+#top-back {
+	background-image:url('../img/mp-06.png');
 	display: block;
-	left:0;
-	z-index:2;
+	height:120%;
+	left:-8%;
+	position:fixed;
+	top:-10%;
+	width:125%;
 }
-.menu-vertical a.active {
-	background-image: linear-gradient(to bottom, #103C56, #22638A, #2C89C1 10%);
-	border-radius: .8rem;
+#top-logo {
+	left: 50%;
+	margin-left: -250px;
+	position: absolute;
+	top: 20%;
+	width: 500px;
 }
-
-@-webkit-keyframes panelVisible {
-	0% {
-		left:-100%;
-	}
-	100% {
-		left:0;
-	}
-}
-@keyframes panelVisible {
-	0% {
-		left:-100%;
-	}
-	100% {
-		left:0;
-	}
-}
-
-/* char size */
-.char-3x {
-	font-size:3rem;
-}
-.impact {
-	font-size:5rem;
-}
-
-/* menu */
-.menu-vertical {
-}
-	.menu-vertical .menu {
-		background-image: -o-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
-		background-image: -moz-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
-		background-image: -webkit-linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
-		background-image: linear-gradient(to bottom, #30759E, #1B83C1, #34AAF1 10%);
-		box-sizing: border-box;
-		border: 2px solid #fff;
-		color: #fff;
-		display: inline-block;
-		margin-bottom: .25rem;
-		margin-right: 0;
-		padding: .8rem 1.1rem;
-		text-decoration: none;
-		-o-transition: all .2s;
-		-ms-transition: all .2s;
-		-moz-transition: all .2s;
-		-webkit-transition: all .2s;
-		transition: all .2s;
-		width: 35%;
-	}
-		.menu-vertical .menu:hover {
-			background-image: linear-gradient(to bottom, #30759E, #30759E, #30759E 100%);
-			border-radius: 5px;
-		}
-
-.back_index {
-	-webkit-animation: backIndex 8s infinite;
-	animation: backIndex 8s infinite;
-	background-blend-mode:overlay;
-	background-color:rgba(0,0,0,0.5);
-	background-image:url(../img/back.jpg);
-	background-position: 0 center;
-	background-size:cover;
-}
-@-webkit-keyframes backIndex {
-	0% {
-		background-position: 0 0;
-	}
-	25% {
-		background-position: 35% 0;
-	}
-	50% {
-		background-position: 45% 0;
-	}
-	75% {
-		background-position: 65% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
-}
-
-.text-center {
+.top-catchcopy {
+	color:#000;
+	font-size:1.1em;
+	font-weight: bold;
+	position: absolute;
 	text-align: center;
+	top:31%;
+	width:100%;
+}
+[class*="cubicon--"] {
+	background-image:url('../img/cubicon.png');
+	border:0px solid #231F20;
+	height: 15%;
+	left:-5%;
+	overflow: hidden;
+	position:absolute;
+	width:110%;
+}
+.cubicon--top {
+	border-bottom-width:4px;
+	top:-8%;
+}
+.cubicon--bottom {
+	border-top-width:4px;
+	bottom:-5%;
 }
 
-@media (max-width: 650px) {
-	.top-cover-left {
-		background-image:url('../img/Portfolio_logo.png');
-	}
-	.top-cover-right {
-		margin-left: 0%;
-	}
-	.top-cover-left {
-		position:relative;
-	}
-	.logo {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-	}
-	.card-info-colored {
-		border-radius: .8rem;
-	}
-	.card-info {
-		border-left:1px solid #E53F3F;
-		border-radius:.8rem;
-		clear:both;
-		display: block;
-	}
-	.top-cover-left,
-	.top-cover-right {
-		width:100%;
-	}
-	.top-cover-left {
-		height:40vh;
-	}
-	.top-cover-right {
-		height:50vh;
-	}
-	.menu-vertical .menu {
-		font-size: .85rem;
-		padding: .5rem 1rem;
-	}
-	.menu-vertical .menu:not(:last-child) {
-		margin-right: 0;
-	}
-	.intro-caption {
-		font-size: 1.7em;
-		text-align: center;
-	}
+#circle-box-wrap {
+	top: 40%;
+	position:absolute;
+	text-align: center;
+	width:100%;
 }
-@media (min-width: 652px) and (max-width: 780px) {
-	.logo {
-		font-size:2em;
-	}
+.circle-box {
+	background-color:#fff;
+	border-radius:5px;
+	box-shadow:2px 2px 0 #444;
+	color:#000;
+	cursor:pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin:2px 2px 2px -185px;
+	font-size:1rem;
+	left:50%;
+	top:62%;
+	padding:1rem 1.25rem;
+	position: absolute;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+	width:370px;
 }
-@media (min-width: 651px) and (max-width: 900px) {
-	.menu-vertical .menu {
-		width:50%;
-	}
+.circle-box:after {
+	content:'';
+	border:10px solid transparent;
+	border-left-color:#000;
+	left:0;
+	margin-top: -10px;
+	position:absolute;
+	top:50%;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.circle-box:hover {
+	background-color:#000;
+	box-shadow:0 0 0;
+	color:#fff;
+}
+.circle-box:hover:after {
+	border-left-color:#fff;
+}
+.coming-soon {
+	background-blend-mode: overlay;
+	background-color: rgba(0,0,0,0.5);
+	background-image: url('../img/stormy-sea.png');
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	box-shadow:1px 1px 3px #111;
+	position: absolute;
+	top:48%;
+	color: #fff;
+	font-size: 2em;
+	margin-left:-10%;
+	padding: .25em 1em;
+	width: 120%;
+	text-align: center;
+	left: 0;
+}
+.coming-soon:after {
+	content: '';
+	border:10px solid transparent;
+	border-top-color:#fff;
+	bottom:calc(-.25em - 12px);
+	left:50%;
+	position:absolute;
 }
