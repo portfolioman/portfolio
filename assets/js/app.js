@@ -24,4 +24,17 @@
 	elemBounce(
 		$('#top-back'), { left : '-=80px' }, { left : '+=80px'}, 4000
 	);
+    // bodyの高さをブラウザにアクセスしたときの高さに固定。
+    // (サイズを変更しても崩れないため)
+    var current_body_height = window.innerHeight;
+    function body_resize() {
+        var body_height = window.innerHeight;
+        if(body_height > current_body_height) {
+            $('body,html').css({
+                height : body_height
+            });
+            current_body_height = body_height;
+        }
+    }
+    $(window).resize(body_resize);
 })();
