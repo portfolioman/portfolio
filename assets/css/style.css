@@ -32,8 +32,44 @@ ul {
 * {
 	box-sizing:border-box;
 }
+/* margin paddings */
 .mb-0 {
     margin-bottom: 0;
+}
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.py-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.sns-share a {
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    color: #fff;
+    font-size:1.5em;
+    margin: 2em 2px;
+    text-decoration: none;
+    padding: .5rem .7rem;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.sns-share a:hover {
+    background-color:#fff;
+    box-shadow: 0 0 0;
+    color:#000;
+}
+.twitter {
+	background-color:#1b95e0;
+}
+.facebook {
+	background-color:#4C67A1;
+}
+.gplus {
+	background-color:#DB4437;
 }
 .text-center {
 	text-align: center;
