@@ -11,7 +11,12 @@ body {
 }
 body.basic {
     background-attachment: fixed;
+    background-color:#222;
+    background-image:-o-linear-gradient(to top, rgba(41, 41, 41, 0.5), rgba(80, 80, 80, 0.5)), url("../img/cat_look_in.jpg");
+    background-image:-moz-linear-gradient(to top, rgba(41, 41, 41, 0.5), rgba(80, 80, 80, 0.5)), url("../img/cat_look_in.jpg");
+    background-image:-webkit-linear-gradient(to top, rgba(41, 41, 41, 0.5), rgba(80, 80, 80, 0.5)), url("../img/cat_look_in.jpg");
     background-image:linear-gradient(to top, rgba(41, 41, 41, 0.5), rgba(80, 80, 80, 0.5)), url("../img/cat_look_in.jpg");
+    background-position:0 0;
     background-repeat:no-repeat;
 	background-size: cover;
 }
@@ -120,6 +125,9 @@ strong.approach {
     bottom: -6%;
     z-index: 1;
     left: 0;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    -o-transform: skewY(2deg);
     transform: skewY(2deg);
 }
 .skew > .inner {
